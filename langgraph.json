@@ -1,0 +1,9 @@
+{
+    "dependencies": [
+        "."
+    ],
+    "graphs": {
+        "agent": "./src/secure_rag_slack_langgraph/ai/graph.py:graph"
+    },
+    "env": ".env"
+}

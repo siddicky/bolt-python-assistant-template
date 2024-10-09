@@ -1,9 +1,25 @@
-[tool.black]
-line-length = 125
+[project]
+name = "secure-rag-slack-langgraph"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "slack>=0.0.2",
+    "slack-bolt>=1.20.1",
+    "langgraph-cli>=0.1.52",
+    "langgraph-sdk>=0.1.32",
+]
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-log_file = "logs/pytest.log"
-log_file_level = "DEBUG"
-log_format = "%(asctime)s %(levelname)s %(message)s"
-log_date_format = "%Y-%m-%d %H:%M:%S"
+[project.scripts]
+secure-rag-slack-langgraph = "secure_rag_slack_langgraph:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.3",
+    "ruff>=0.6.9",
+]
